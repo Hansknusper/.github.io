@@ -231,35 +231,19 @@
         <label for="nachricht">Projektbeschreibung *</label>
         <textarea id="nachricht" name="Nachricht" rows="5" placeholder="Beschreibe dein Projekt, Maße oder das benötigte Bauteil..." required></textarea>
 
-        <!-- Moderner Dateiupload mit Löschen-Funktion -->
-        <div class="form-group" style="margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-weight: 600;">3D-Datei hinzufügen (Optional)</label>
-            
-            <div class="file-upload-box">
-                <!-- Verstecktes Standard-Input -->
-                <input type="file" id="fileInput" name="attachment" accept=".stl,.step,.stp,.3mf,.obj,.zip" style="display: none;">
-                
-                <!-- Klick-Bereich vor Dateiauswahl -->
-                <div id="uploadPrompt" class="upload-prompt" onclick="document.getElementById('fileInput').click()">
-                    <span class="upload-icon">📁</span>
-                    <p class="upload-text"><strong>Klicke hier</strong>, um eine Datei auszuwählen</p>
-                    <span class="file-formats">Erlaubte Formate: .stl, .step, .3mf, .obj, .zip</span>
-                </div>
-
-                <!-- Anzeige NACH Dateiauswahl mit Entfernen-Button -->
-                <div id="fileInfo" class="file-selected-info" style="display: none;">
-                    <div class="file-details">
-                        <span class="file-icon">📄</span>
-                        <span id="fileName" class="file-name">dateiname.stl</span>
-                    </div>
-                    <button type="button" class="btn-remove-file" onclick="removeSelectedFile()">
-                        ✕ Datei entfernen
-                    </button>
-                </div>
-            </div>
+        <!-- Schlanker Upload mit Löschen-Button -->
+        <label for="file">3D-Datei hinzufügen (Optional)</label>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="file" id="file" name="attachment" accept=".stl,.step,.stp,.3mf,.obj,.zip" style="flex: 1;">
+            <button type="button" onclick="document.getElementById('file').value = ''" style="background: #ef4444; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; width: auto; margin: 0;">
+                ✕ Datei löschen
+            </button>
         </div>
+        <span class="file-hint" style="font-size: 0.8rem; color: #94a3b8; display: block; margin-top: 0.4rem;">
+            Erlaubte Formate: .stl, .step, .3mf, .obj, .zip
+        </span>
 
-        <button type="submit">Anfrage senden</button>
+        <button type="submit" style="margin-top: 15px;">Anfrage senden</button>
     </form>
 </section>
         <!-- Impressum & Datenschutz Sektion -->
