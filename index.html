@@ -189,31 +189,39 @@
             <!-- WICHTIG: Lade das Bild 'zahnrad-druck.jpg' in dein GitHub-Repo hoch -->
                    <img src="WhatsApp Image 2026-08-17 at 08.03.27.jpeg" alt="3D-gedrucktes Zahnrad">
                    <h3>Getriebe-Zahnrad</h3>
-                   <p>Ersatzteil für ein altes RöhrenRadio nachkonstruiert und aus PETG gedruckt.</p>
+                   <p>Ersatzteil für ein altes RöhrenRadio nachkonstruiert und aus PLA/PA6 gedruckt.</p>
                 </div>
 
                 <!-- Projekt 2 -->
                 <div class="card">
             <!-- WICHTIG: Lade das Bild 'cad-modell.png' in dein GitHub-Repo hoch -->
-                   <img src="Blikerteil.jfif" alt="CAD Konstruktion Blinkerhalter">
+                   <img src="Blinkerteil.jfif" alt="CAD Konstruktion Blinkerhalter">
                    <h3>CAD Konstruktion</h3>
-                   <p>Selbst Konstruktion in CAD für Blinker Halter</p>
+                   <p>Selbst Konstruktion in CAD für Blinker Halter aus PLA</p>
                 </div>
             </div>
         </section>
 
         <!-- Über mich Sektion -->
-        <section id="about" class="section">
-            <h2>Über das Projekt</h2>
-            <p>Ich konstruiere und drucke leidenschaftlich gerne Ersatzteile und individuelle Kunststoffkomponenten. Egal ob abgebrochene Halterungen, Zahnräder oder eigene Ideen – mit CAD-Software und Präzisions-3D-Druckern erstelle ich maßgeschneiderte Lösungen.</p>
-        </section>
+     <section id="about" class="section">
+    <h2>Über das Projekt</h2>
+    <p>
+        Ich konstruiere und drucke leidenschaftlich gerne Ersatzteile und individuelle Kunststoffkomponenten. 
+        Egal ob abgebrochene Halterungen, Zahnräder oder eigene Ideen – mit CAD-Software und Präzisions-3D-Druckern erstelle ich maßgeschneiderte Lösungen.
+    </p>
+    <p>
+        <strong>Zukunftspläne & Support:</strong> Mein Ziel ist es, mich später in diesem Bereich selbstständig zu machen. 
+        Aktuell läuft das Ganze auf Hobby-Ebene gegen reine Materialkostenübernahme. Wenn du mit einem Bauteil zufrieden bist, 
+        freue ich mich riesig über positives Feedback, Empfehlungen oder wenn du mein Projekt mit Freunden teilst – das hilft mir enorm beim Aufbau!
+    </p>
+</section>
 
         <!-- Kontakt Sektion -->
-        <section id="kontakt" class="section">
-         <h2>Projekt anfragen</h2>
-         <p>Du benötigst ein Ersatzteil oder hast eine Skizze/3D-Datei? Schreib mir einfach eine Nachricht!</p>
+      <section id="kontakt" class="section">
+    <h2>Projekt anfragen</h2>
+    <p>Du benötigst ein Ersatzteil oder hast eine Skizze/3D-Datei? Schreib mir einfach eine Nachricht!</p>
     
-    <form action="https://formspree.io/f/xnpqlbda" method="POST" enctype="multipart/form-data">
+    <form action="https://formspree.io/f/xaeyadqq" method="POST" enctype="multipart/form-data">
         <label for="name">Dein Name *</label>
         <input type="text" id="name" name="Name" placeholder="Dein Name" required>
 
@@ -223,17 +231,37 @@
         <label for="nachricht">Projektbeschreibung *</label>
         <textarea id="nachricht" name="Nachricht" rows="5" placeholder="Beschreibe dein Projekt, Maße oder das benötigte Bauteil..." required></textarea>
 
-        <!-- Optionaler Dateiupload für STL / STEP -->
-        <label for="file">3D-Datei hinzufügen (Optional)</label>
-        <input type="file" id="file" name="attachment" accept=".stl,.step,.stp,.3mf,.obj,.zip">
-        <span class="file-hint" style="font-size: 0.8rem; color: #94a3b8; display: block; margin-top: -0.3rem;">
-            Erlaubte Formate: .stl, .step, .3mf, .obj, .zip
-        </span>
+        <!-- Moderner Dateiupload mit Löschen-Funktion -->
+        <div class="form-group" style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px; font-weight: 600;">3D-Datei hinzufügen (Optional)</label>
+            
+            <div class="file-upload-box">
+                <!-- Verstecktes Standard-Input -->
+                <input type="file" id="fileInput" name="attachment" accept=".stl,.step,.stp,.3mf,.obj,.zip" style="display: none;">
+                
+                <!-- Klick-Bereich vor Dateiauswahl -->
+                <div id="uploadPrompt" class="upload-prompt" onclick="document.getElementById('fileInput').click()">
+                    <span class="upload-icon">📁</span>
+                    <p class="upload-text"><strong>Klicke hier</strong>, um eine Datei auszuwählen</p>
+                    <span class="file-formats">Erlaubte Formate: .stl, .step, .3mf, .obj, .zip</span>
+                </div>
+
+                <!-- Anzeige NACH Dateiauswahl mit Entfernen-Button -->
+                <div id="fileInfo" class="file-selected-info" style="display: none;">
+                    <div class="file-details">
+                        <span class="file-icon">📄</span>
+                        <span id="fileName" class="file-name">dateiname.stl</span>
+                    </div>
+                    <button type="button" class="btn-remove-file" onclick="removeSelectedFile()">
+                        ✕ Datei entfernen
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <button type="submit">Anfrage senden</button>
     </form>
 </section>
-
         <!-- Impressum & Datenschutz Sektion -->
         <section id="impressum" class="section">
             <h2>Impressum & Datenschutz</h2>
