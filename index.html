@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hansknusper 3D | CAD & 3D-Druck Portfolio</title>
+    <style>
+        /* Modernes & schlichtes Design (CSS) */
+        :root {
+            --primary: #2563eb;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Portfolio Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid #334155;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            margin-top: 0.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Notice Box */
+        .notice-box {
+            background-color: rgba(37, 99, 235, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Formular */
+        form {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea, button {
+            padding: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hansknusper 3D-Druck & CAD</h1>
+        <p>Ersatzteile, Prototypen & individuelle Konstruktionen</p>
+        <nav>
+            <a href="#portfolio">Projekte</a>
+            <a href="#about">Über mich</a>
+            <a href="#kontakt">Anfrage</a>
+            <a href="#impressum">Impressum</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Hinweis zum Hobby-Status -->
+        <div class="notice-box">
+            <strong>Hobby-Projekt:</strong> Dies ist eine rein private Portfolio-Website. Ich biete Unterstützung bei 3D-Druck und CAD-Konstruktionen auf Hobby-Ebene gegen reine Selbstkostenunterstützung (Material & Filament) an.
+        </div>
+
+        <!-- Portfolio Sektion -->
+        <section id="portfolio" class="section">
+            <h2>Bisherige Projekte</h2>
+            <div class="grid">
+                
+                <!-- Projekt 1 -->
+                <div class="card">
+                    <!-- Ersetze 'zahnrad.jpg' später durch dein Bild -->
+                    <img src="https://via.placeholder.com/300x200?text=Zahnrad+CAD" alt="Zahnrad Ersatzteil">
+                    <h3>Getriebe-Zahnrad</h3>
+                    <p>Ersatzteil für ein altes Haushaltsgerät nachkonstruiert und aus PETG gedruckt.</p>
+                </div>
+
+                <!-- Projekt 2 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Gehaeuse+3D" alt="Custom Gehäuse">
+                    <h3>Custom Gehäuse</h3>
+                    <p>Passgenaues 3D-Druck-Gehäuse für Elektronik-Komponenten.</p>
+                </div>
+
+                <!-- Projekt 3 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Halterung" alt="Halterung">
+                    <h3>Sonderhalterung</h3>
+                    <p>Robuste Halterung aus TPU/PETG für Werkstatt & Hobbybereich.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Über mich Sektion -->
+        <section id="about" class="section">
+            <h2>Über das Projekt</h2>
+            <p>Ich konstruiere und drucke leidenschaftlich gerne Ersatzteile und individuelle Kunststoffkomponenten. Egal ob abgebrochene Halterungen, Zahnräder oder eigene Ideen – mit CAD-Software und Präzisions-3D-Druckern erstelle ich maßgeschneiderte Lösungen.</p>
+        </section>
+
+        <!-- Kontakt Sektion -->
+        <section id="kontakt" class="section">
+            <h2>Projekt anfragen</h2>
+            <p>Du benötigst ein Ersatzteil oder hast eine Skizze/STL-Datei? Schreib mir einfach eine Nachricht oder kontaktiere mich über Instagram.</p>
+            
+            <form action="mailto:DEINE-EMAIL@EXAMPLE.COM" method="post" enctype="text/plain">
+                <input type="text" name="Name" placeholder="Dein Name" required>
+                <input type="email" name="Email" placeholder="Deine E-Mail-Adresse" required>
+                <textarea name="Nachricht" rows="5" placeholder="Beschreibe dein Projekt oder das benötigte Bauteil..." required></textarea>
+                <button type="submit">Anfrage senden</button>
+            </form>
+        </section>
+
+        <!-- Impressum & Datenschutz Sektion -->
+        <section id="impressum" class="section">
+            <h2>Impressum & Datenschutz</h2>
+            <p><strong>Angaben gemäß § 5 DDG (Minderjährigen-Vertretung):</strong></p>
+            <p>
+                Hansknusper 3D-Druck (Hobbyprojekt)<br>
+                <strong>Vertreten durch die Erziehungsberechtigten:</strong> [Vorname & Nachname der Eltern]<br>
+                [Straße und Hausnummer]<br>
+                [PLZ und Ort]<br>
+                Deutschland
+            </p>
+            <p>
+                <strong>Kontakt:</strong><br>
+                E-Mail: [DEINE-EMAIL@EXAMPLE.COM]<br>
+                Instagram: @[DeinInstagramName]
+            </p>
+            <p><strong>Datenschutz-Hinweis:</strong><br>
+            Über diese Website eingegebene Daten (z. B. Name und E-Mail-Adresse im Kontaktformular) werden ausschließlich zur Bearbeitung deiner Anfrage genutzt und nicht an Dritte weitergegeben. Da es sich um eine rein private Website handelt, werden keine Tracking-Cookies eingesetzt.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hansknusper 3D-Druck | Gehostet über GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
